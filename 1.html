@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./swiper.min.css">
+  <style>
+    html body {
+      max-width: 375px;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-size: 62.5%;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      background-image: url('./导出/Q_0049_图层-21.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+    .header {
+      height: 53.5px;
+      background-color: #191a43;
+      padding: 8.5px 7.5px 5.5px 15.5px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+    }
+    .header__logo {
+      width: 129px;
+      height: 35px;
+    }
+    .header-button {
+      width: 65.5px;
+      height: 25.5px;
+      margin-top: 7.5px;
+      display: inline-block;
+      background-image: url('./导出/Q_0001_图层-945-拷贝-2.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+    }
+    .header-button:nth-child(2) {
+      margin-left: 5px;
+     
+    }
+    .header-button > img {
+      width: 47.5px;
+      height: 11.5px;
+      line-height:25.5px;
+      position: relative;
+      top: 7px;
+    }
+    .swiper-container {
+      height: 491px;
+      width: 100%;
+    }
+    .swiper-slide__img {
+      height: 491px;
+      width: 100%;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #fef7e7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img class="header__logo" src="./导出/Q_0018_图层-596.png" alt="">
+      <div >
+        <div class="header-button">
+          <img src="./导出/Q_0004_担保说明.png" alt="">
+        </div>
+        <div class="header-button ">
+          <img src="./导出/Q_0000_免责声明.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="swiper-slide__img" src="./导出/Q_0048_图层-15-拷贝.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img class="swiper-slide__img" src="./导出/Q_0048_图层-15-拷贝.png" alt="">
+          </div>
+          <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <script src="./swiper.min.js"></script>
+  <script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+      autoplay: true,//可选选项，自动滑动
+      
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      
+     
+    })        
+  </script>
+</body>
+</html>
