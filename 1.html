@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./swiper.min.css">
   <style>
     html body {
-      max-width: 375px;
+      max-width: 750px;
       min-height: 100vh;
       margin: 0 auto;
       padding: 0;
@@ -135,10 +135,10 @@
     }
     .streamer__text {
       position: absolute;
-      left: 32.5px;
+      left: 4%;
       top: 7px;
       height: 18px;
-      width: 290px;
+      width: 90%;
     }
     .five__title {
       width: 100%;
@@ -154,24 +154,24 @@
     }
     .boxes {
       width: 100%;
-      height: 305px;
+      height: 343px;
       background-image: url('./导出/Q_0044_图层-33-拷贝.png');
-      background-position: center center;
+      background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 100% 100%;
       margin-top: 7px;
       display: flex;
       flex-wrap: wrap;
-      padding: 28px 32px;
+      padding: 28px 24px;
       box-sizing: border-box;
     }
     .boxes-items {
-      width: 93.5px;
-      height: 95px;
+      width: 30%;
+      height: 105px;
       background-image: url('./导出/Q_0025_图层-43.png');
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 100% 100%;
       margin-right: 10px;
       padding: 11px;
       box-sizing: border-box;
@@ -183,9 +183,19 @@
       height: 10px;
       display: block;
     }
+    .boxes-items__text--red {
+      color: #ff0000 !important;
+    }
+    .boxes-items__text {
+      color: #fff;
+    }
+    .align {
+      text-align: center;
+    }
+
     .paging {
       margin: 0 auto;
-      margin-top: 18px;
+      /* margin-top: 18px; */
       width: 128.5px;
       height: 21.5px;
       display: flex;
@@ -227,16 +237,17 @@
     .link-title {
       display: flex;
       align-items: center;
-      padding: 0 22px;
+      justify-content: center;
+      /* padding: 0 22px; */
       margin-top: 10px;
     }
     .link-boxes {
       width: 100%;
       height: 234.5px;
       background-image: url(./导出/Q_0028_图层-41.png);
-      background-position: center center;
+      background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 100% 100%;
       margin-top: 7px;
       display: flex;
       flex-wrap: wrap;
@@ -262,6 +273,25 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: contain;
+    }
+    .dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: #fff;
+      padding: 20px;
+      display: none;
+      width: 70%;
+      height: 100px;
+      border-radius: 8px;
+    }
+    .dialog-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      width: 14px;
+      height: 14px;
     }
   </style>
 </head>
@@ -308,7 +338,7 @@
         <img class="contact-colse" src="./导出/Q_0005_ty_bt_guanbi1.png" alt="">
       </div>
       <div class="banner-title">
-        <img style="width: 333.5px;height: 82px;" src="./导出/Q_0045_组-22.png"></img>
+        <img style="width: 95%;height: 82px;" src="./导出/Q_0045_组-22.png"></img>
       </div>
       <div class="streamer">
         <img class="streamer__bg" src="./导出/Q_0046_图层-30.png" alt="">
@@ -319,57 +349,75 @@
       <img style="width: 78.5px;height: 18.5px;" src="./导出/Q_0016_五位靓号.png" alt="">
     </div>
     <div class="boxes">
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
       <div class="paging">
         <div class="paging-left">
-          <img style="width: 29.5px;height: 9px;" src="./导出/Q_0042_上一页.png" alt="">
+          <div>上一页</div>
         </div>
         <div class="paging-center">
-          <img style="width: 10px;height: 10px;" src="./导出/Q_0038_01.png" alt="">
+          <div style="color: #fff;">01</div>
         </div>
         <div class="paging-right">
-          <img style="width: 29.5px;height: 9px;" src="./导出/Q_0040_下一页.png" alt="">
+          <div style="font-size: 10px;">下一页</div>
         </div>
       </div>
     </div>
@@ -377,81 +425,105 @@
       <img style="width: 78.5px;height: 18.5px;" src="./导出/Q_0014_六位靓号.png" alt="">
     </div>
     <div class="boxes">
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
-      <div class="boxes-items">
-        <img class="boxes-items__img" src="./导出/Q_0033_账号：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0036_66688.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 4px;" src="./导出/Q_0034_{顺顺顺发发}.png" alt="">
-        <img class="boxes-items__img" style="margin-top: 6px;" src="./导出/Q_0032_价格：.png" alt="">
-        <img class="boxes-items__img" style="margin: 0 auto;margin-top: 6px;" src="./导出/Q_0035_￥1888.88.png" alt="">
+      <div class="boxes-items" onclick="click()">
+        <div class="boxes-items__text">账号：</div>
+        <div style="text-align: center;">
+          <span class="boxes-items__text align boxes-items__text--red">666</span>
+          <span class="boxes-items__text align">88</span>
+        </div>
+        <div class="boxes-items__text align">{顺顺顺发发}</div>
+        <div class="boxes-items__text" style="margin-top: 4px;">价格：</div>
+        <div class="boxes-items__text align">￥1888.88</div>
       </div>
       <div class="paging">
         <div class="paging-left">
-          <img style="width: 29.5px;height: 9px;" src="./导出/Q_0042_上一页.png" alt="">
+          <div>上一页</div>
         </div>
         <div class="paging-center">
-          <img style="width: 10px;height: 10px;" src="./导出/Q_0038_01.png" alt="">
+          <div style="color: #fff;">01</div>
         </div>
         <div class="paging-right">
-          <img style="width: 29.5px;height: 9px;" src="./导出/Q_0040_下一页.png" alt="">
+          <div style="font-size: 10px;">下一页</div>
         </div>
       </div>
     </div>
     <div class="link-title">
-      <img style="width: 77px;height: 10.5px;" src="./导出/Q_0031_图层-34.png" alt="">
-      <img style="width: 162px;height: 20px;margin: 0 5px;" src="./导出/Q_0029_超凡靓号网友情链接.png" alt="">
-      <img style="width: 77px;height: 10.5px;" src="./导出/Q_0030_图层-34-拷贝.png" alt="">
+      <img style="width: 21%;height: 10.5px;" src="./导出/Q_0031_图层-34.png" alt="">
+      <img style="width: 50%;height: 20px;margin: 0 5px;" src="./导出/Q_0029_超凡靓号网友情链接.png" alt="">
+      <img style="width: 21%;height: 10.5px;" src="./导出/Q_0030_图层-34-拷贝.png" alt="">
     </div>
     <div class="link-boxes">
       <div class="boxes-items link-boxes__items">
-        <img style="width: 49px;height: 47px;" src="./导出/Q_0021_图层-562.png" alt="">
-        <img style="width: 58px;height: 11px;" src="./导出/Q_0024_必赢客官网.png" alt="">
+        <img style="width: 90%;height: 60%;" src="./导出/Q_0021_图层-562.png" alt="">
+        <span style="color:#fff;font-size: 8px;">必赢客官网</span>
       </div>
       <div class="boxes-items link-boxes__items">
-        <img style="width: 72px;height: 48px;" src="./导出/Q_0015_5e9e973c3383c57a8d8d28418a12901.png" alt="">
-        <img style="width: 51px;height: 11px;" src="./导出/Q_0023_502开奖网.png" alt="">
+        <img style="width: 90%;height: 60%;" src="./导出/Q_0015_5e9e973c3383c57a8d8d28418a12901.png" alt="">
+        <span style="color:#fff;font-size: 8px;">502开奖网</span>
       </div>
       <div class="boxes-items link-boxes__items">
-        <div style="width: 72px;height: 48px;"></div>
-        <img style="width: 49px;height: 11px;" src="./导出/Q_0022_尽请期待.png" alt="">
+        <div style="width: 90%;height: 60%;"></div>
+        <span style="color:#fff;font-size: 8px;">尽请期待</span>
       </div>
       <div class="link-main">
         <img style="width:90px;height: 13px;" src="./导出/Q_0026_友情链接申请.png" alt="">
       </div>
+    </div>
+    <div class="dialog" id="dialog">
+      <img class="dialog-close" id="close" src="./导出/关闭26.png"></img>
+      <div style="font-size: 23px;color: #ff0000;font-weight: 700;text-align: center;">66688</div>
+      <div style="font-size: 15px;color: #ff0000;margin-top: 10px;">购买注意：</div>
+      <div style="font-size: 15px;color: #f6ad40;margin-top: 10px;">解冻服务：</div>
     </div>
   </div>
   <script src="./swiper.min.js"></script>
@@ -463,6 +535,23 @@
         el: '.swiper-pagination',
       },
     })
+
+    var items = Array.from(document.getElementsByClassName('boxes-items'))
+    items = items.filter((e) => e.classList.length === 1)
+    console.log(items);
+    items.forEach(ele => {
+      ele.onclick = e => {
+        console.log('触发');
+        var dialog = document.getElementById('dialog')
+        dialog.style.display = 'block'
+      }
+    })
+    var close = document.getElementById('close')
+    close.onclick = e => {
+      console.log('触发');
+      var dialog = document.getElementById('dialog')
+      dialog.style.display = 'none'
+    }
   </script>
 </body>
 </html>
